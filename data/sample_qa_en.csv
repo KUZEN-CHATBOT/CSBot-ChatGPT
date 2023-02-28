@@ -1,0 +1,83 @@
+CATEGORY,ID,QUESTION,EXPRESSION,ANSWER or MESSAGE,ID,QUESTION,EXPRESSION,ANSWER or MESSAGE,ID,QUESTION,EXPRESSION,ANSWER or MESSAGE,ID,QUESTION,EXPRESSION,ANSWER or MESSAGE,ID,QUESTION,EXPRESSION,ANSWER or MESSAGE,ID,QUESTION,EXPRESSION,ANSWER or MESSAGE,ID,QUESTION,EXPRESSION,ANSWER or MESSAGE,ID,QUESTION,EXPRESSION,ANSWER or MESSAGE,ID,QUESTION,EXPRESSION,ANSWER or MESSAGE,ID,QUESTION,EXPRESSION,ANSWER or MESSAGE,ID,QUESTION
+,,About accounts,"I want to know about accounts;
+Information about accounts",Your inquiry is about accounts. How can we help you?,,I can not login to my account.,"I can not login;
+I can not login to my account;
+I can not sign-in",You can not login to your account. We've got this.,,I forgot my login password,"Forgot password;
+I can not remember my password","I see you have forgot your password.
+There's a link to recover your password on our Help page - please refer to that.",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,Forgot your account ID,"Forgot your account ID;
+I can not remember the ID of the account",You forgot your account ID. Visit our Help page to check your account ID on our Help page.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,My account is hacked,"My account is hacked;
+Account hacked;
+Someone took my account",I see that yout account is hacked. Please contact the following number immediately.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,I want to create a new account,"I want to create a new account;
+I'd like to add a new account","Your inquiry is about how to create a new account.
+Logout from the current account first, and click the link: Create A New Account on the Login page.
+
+We recommend you to set up two-factor authentication. Please refer to the followings to check the configuration procedure.",,Send the code via SMS; Authenticate via push notification,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,I want to duplicate my account,"I want to duplicate my account;
+I want to copy my account",Your inquiry is about how to duplicate your account. We are afraid that we don't support such function.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,I want to delete my account,"I want to delete my account;
+How can I delete my account?","Your inquiry is about how to delete an account.
+Login as Account Manager first and delete selected accounts from ""My Page"".",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,About two factor authentication,"About two factor authentication;
+About authentication for login",How can we help you?,,How to setup two factor authentication,"Setting up two factor authentication;
+I want to set up two factor authentication;
+I can not setup two factor authentication","Your inquiry is about how to setup two factor authentication.
+You have 2 ways to do so:",,Send the code via SMS,"Send the code via email;
+Send the code via SMS","For the 2 factor authentication setting, please refer to this link.
+
+If you don’t receive any notification, please refer to the followings.",,I did not receive the code via SMS,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,Authenticate via push notification,2 factor authentication via push notification,"For the 2 factor authentication using the push notification, please refer to this link.
+
+If you don’t receive any notification, please refer to the followings.",,I did not receive any push notification,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,I did not receive the code via SMS,"I did not receive the code;
+It failed to authenticate with a  code received via short e-mail;
+It failed to authenticate via SMS","If you already have the backup code, please update your mobile settings.
+If you have not received a valid backup code yet, please contact our support team.",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,I did not receive any push notification,"I did not receive any push notification;
+Push notification didn't reach me;
+Failed to receive a push notification",Please make sure that the mobile notifications are turned on.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,About password,"I want you to tell us about the password;
+I want to know about password",Your inquiry is about password. How can we help you?,,I want to set up a new password,"I want to set up a new password;
+I want to reset my password","Your inquiry is about how to set up a new password.
+Please visit My Page and click ""Create New Password"".",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,I want to know how encryption works for my password,"I want to know how the encryption works for my password;
+How does the encryption works on passwords?","Your inquiry is about how the encryption works for your password.
+We regret to inform you that we cannot reveal it to anybody since it's a sensitive information.",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,Profile image is not displayed in the My Page,"Profile image of My Page is not displayed;
+Profile image is weird;
+It does not display my profile picture","Your inquiry is about image. Here's something we'd like you to double-check
+1. The image format is not PNG
+2. The link is expired",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,Function setting of My Page is not updated,"Function setting of My Page is not updated;
+I can not complete setting of My Page","Your inquiry is about function setting. We think you might have tried at out maintainance time.
+(5:00AM-6:00AM everyday). Please try again at other time.",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,My Page frozen,"My Page frozen;
+My Page stopped working;
+My Page is broken","Your inquiry is about My Page. 
+We think your javascript is disabled. Please allow it to use on the browser and try again.",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,Information of someone else has been displayed on the My Page,"I can see others' info on My Page;
+Information of someone else has been displayed on the My Page","Your inquiry is about others' information is visible on your page.
+We are sorry. Perhaps it is our system error. Pease contact us at the following e-mail address.",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,Timeline is frozen,"Timeline is frozen;
+Timeline stopped","Your inquiry is about timeline is frozen.We think you might have tried at out maintainance time.
+(5:00AM-6:00AM everyday). Please try again at other time.",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,Timeline doesn't work,"Timeline doesn't work;
+Timeline is slow","Your inquiry is about timeline doesn't work. Please try again when you quit some other applications.
+",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,Want to stop receivng ads on my timeline,"Want to stop receivng ads on my timeline;
+Ads are annoying","Your inquiry is about how to stop receiving ads. You can do so 
+when you upgrade to our Premium plan.",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,There is an inappropriate post on my timeline,"There is an inappropriate post on my timeline;
+I found an inappropriate post;","Thanks for your report on the inappropriate content. We will hide and remove them from out platform immediately.
+
+",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,I can not post a message,"can not post anything;
+I cannot post a message",Your reporting that you cannot post anything. Please check the internet connection and try again.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,The text I posted was garbled,"Post gets garbled;
+My post is garbled",Your reporting that the texts get garbled. Please check the language setting on your device and try again.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,Past posts have disappeared,"Past posts have disappeared;
+I do not see any old post","Your reporting that your old posts have disappeared.
+We support to store the posts up to 1 year for our free plan users.
+ Premium plan users can see posts older than that.",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
