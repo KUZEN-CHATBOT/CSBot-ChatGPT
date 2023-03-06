@@ -5,6 +5,14 @@ from dotenv import load_dotenv
 import qa
 import scrape
 
+import os
+import sentry_sdk
+
+sentry_sdk.init(
+    dsn=os.environ['OPEN_API_KEY'],
+    traces_sample_rate=1.0
+)
+
 load_dotenv()
 app = Flask(__name__)
 
