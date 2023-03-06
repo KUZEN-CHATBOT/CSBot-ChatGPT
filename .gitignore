@@ -1,2 +1,5 @@
 .env
 index.json
+/data*
+__pycache__/
+index_*.json

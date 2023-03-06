@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-def generate_index(directory_path):
+def generate_index(directory_path, original_service_id):
   # set maximum input size
   max_input_size = 4096
   # set number of output tokens
@@ -24,7 +24,7 @@ def generate_index(directory_path):
 
   index = GPTSimpleVectorIndex(documents, llm_predictor=llm_predictor, prompt_helper=prompt_helper)
 
-  index.save_to_disk('index.json')
+  index.save_to_disk(f'index_{original_service_id}.json')
 
   return index
 
