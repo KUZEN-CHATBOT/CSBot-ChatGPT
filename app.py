@@ -34,9 +34,9 @@ def get_bot_message():
     original_service_id = request.form.get("original_service_id")
     print(f"query: {query}")
     index = GPTSimpleVectorIndex.load_from_disk(f'index_{original_service_id}.json')
-    response = index.query(query, response_mode="compact")
-    print(f"response: {response.response}")
-    return json.dumps(response.response,indent=2)
+    response = index.query(query)
+    print(f"response: {response.get_formatted_sources()}")
+    return {"message": json.dumps(response.response, indent=2, ensure_ascii=False)}
 
 @app.route('/index', methods=['POST'])
 def generate_index():
