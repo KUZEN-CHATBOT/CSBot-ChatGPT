@@ -108,8 +108,8 @@ jobs:
             echo "export AWS_ACCOUNT_URL=${AWS_ACCOUNT_URL_STGV6}" >> $BASH_ENV
       - pre-env
       - build-and-deploy:
-          image_name: "ai-bot"
-          cluster_name: "ai-bot-stgv6"
+          image_name: "ai-bot-py-stgv6"
+          cluster_name: "kuzen-stgv6"
           service_name: "ai-bot-stgv6"
       - slack/notify:
           event: fail
@@ -134,4 +134,6 @@ workflows:
             - aws-env-secrets
           filters:
             branches:
-              only: "staging"
+              only: 
+                - staging
+                - infra/dungnm/#184624112-config-ci

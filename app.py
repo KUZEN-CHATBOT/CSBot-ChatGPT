@@ -1,4 +1,4 @@
-from flask import Flask, g, request
+from flask import Flask, g, request, Response
 import json
 from llama_index import GPTSimpleVectorIndex, SimpleDirectoryReader, LLMPredictor, PromptHelper
 from dotenv import load_dotenv
@@ -7,14 +7,26 @@ import scrape
 
 import os
 import sentry_sdk
+from sentry_sdk.integrations.flask import FlaskIntegration
 
 sentry_sdk.init(
-    dsn=os.environ['OPEN_API_KEY'],
+    dsn=os.environ['SENTRY_DNS'],
+    integrations=[
+        FlaskIntegration(),
+    ],    
     traces_sample_rate=1.0
 )
 
 load_dotenv()
 app = Flask(__name__)
+
+@app.route('/debug-sentry')
+def trigger_error():
+    division_by_zero = 1 / 0
+
+@app.route('/healthcheck')
+def healthcheck():
+    return Response(response="healthy", status=200)
 
 @app.route('/message', methods=['POST'])
 def get_bot_message():

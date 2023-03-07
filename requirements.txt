@@ -53,3 +53,5 @@ python-dotenv==1.0.0
 flask
 html2text
 beautifulsoup4
+blinker
+sentry-sdk[flask]
