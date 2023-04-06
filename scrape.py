@@ -2,7 +2,7 @@ import requests
 import html2text
 from bs4 import BeautifulSoup
 import os
- 
+import time
 
 def get_text_from_url(url):
     res = requests.get(url)

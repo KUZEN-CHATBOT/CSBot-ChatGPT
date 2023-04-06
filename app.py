@@ -8,6 +8,7 @@ import scrape
 import os
 import sentry_sdk
 from sentry_sdk.integrations.flask import FlaskIntegration
+import crawl
 
 sentry_sdk.init(
     dsn=os.environ['SENTRY_DNS'],
@@ -40,15 +41,29 @@ def get_bot_message():
 
 @app.route('/index', methods=['POST'])
 def generate_index():
-    url = request.form.get("url")
-    original_service_id = request.form.get("original_service_id")
-    if not original_service_id:
-        return {"status": "Error: original_service_id is not found."}
-    elif not url:
-        return {"status": "Error: url is not found."}
+    mode = request.form.get("mode")
+    if mode == "all":
+        original_service_id = "crawled"
     else:
-        title, contents = scrape.get_text_from_url(url)
-        scrape.save_contents(title, contents, original_service_id)
+        url = request.form.get("url")
+        original_service_id = request.form.get("original_service_id")
+        if not original_service_id:
+            return {"status": "Error: original_service_id is not found."}
+        elif not url:
+            return {"status": "Error: url is not found."}
+        else:
+            title, contents = scrape.get_text_from_url(url)
+            scrape.save_contents(title, contents, original_service_id)
 
     qa.generate_index(f"data_{original_service_id}/", original_service_id)
     return {"status": "Success"}
+
+
+@app.route('/crawl', methods=['POST'])
+def start_crawl():
+    try:
+        crawl.start_crawl()
+        return {"status": "Success"}
+    except Exception as e:
+        print(e)
+        return {"status": "Fail"}

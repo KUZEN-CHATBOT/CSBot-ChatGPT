@@ -30,3 +30,20 @@ To send the message to the bot
 ```
 curl '127.0.0.1:5000/message' -X POST -v  -F 'query=KUZENについて教えて' -F'original_service_id=1000'| jq .
 ```
+
+
+
+Crawl all data from kuzen
+```
+curl -X POST '127.0.0.1:5000/crawl' | jq .
+```
+
+To generate index from all crawled data (need to remove "note.com_kota_shirakura.txt" from folder data_crawled first)
+```
+curl -X POST '127.0.0.1:5000/index' -F'mode=all' | jq .
+```
+
+To send the message to the bot using index generated from crawled data
+```
+curl '127.0.0.1:5000/message' -X POST -v  -F 'query=KuzenのCEOはだれすか' -F'original_service_id=crawled' | jq .
+```

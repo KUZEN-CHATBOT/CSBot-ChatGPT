@@ -54,4 +54,7 @@ flask
 html2text
 beautifulsoup4
 blinker
+Scrapy==2.8.0
+Twisted==22.10.0
+attrs==22.2.0
 sentry-sdk[flask]
