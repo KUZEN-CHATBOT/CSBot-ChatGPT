@@ -6,6 +6,7 @@ from urllib.parse import urlparse
 from twisted.internet import reactor
 from scrapy.utils.project import get_project_settings
 from multiprocessing import Process, Queue
+import re
 
 class KuzenSpider(scrapy.Spider):
     name = "kuzen"
@@ -34,8 +35,9 @@ class KuzenSpider(scrapy.Spider):
             link_path = response.url.replace('http://', '').replace('https://', '').replace('/', '_')
             filename_data = os.path.join('data_crawled', link_path + ".txt")
             os.makedirs(os.path.dirname(filename_data), exist_ok=True)
+            cleaned_content = re.sub(r'\!\[[^\]]*[^\)]+[^\n]*\)', '', content)
             with open(filename_data, 'w', encoding="utf-8") as data:
-                data.write(content)
+                data.write(cleaned_content)
             for href in response.css('a::attr(href)').getall():
                 if href.startswith('http'):
                     yield scrapy.Request(href, callback=self.parse_page)

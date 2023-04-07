@@ -38,8 +38,7 @@ Crawl all data from kuzen
 curl -X POST '127.0.0.1:5000/crawl' | jq .
 ```
 
-To generate index from all crawled data (need to remove "note.com_kota_shirakura.txt" from folder data_crawled first)
-```
+To generate index from all crawled data
 curl -X POST '127.0.0.1:5000/index' -F'mode=all' | jq .
 ```
 

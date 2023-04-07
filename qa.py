@@ -24,7 +24,8 @@ def generate_index(directory_path, original_service_id):
 
   index = GPTSimpleVectorIndex(documents, llm_predictor=llm_predictor, prompt_helper=prompt_helper)
 
-  index.save_to_disk(f'index_{original_service_id}.json')
+  os.makedirs('index', exist_ok=True)
+  index.save_to_disk(os.path.join('index',f'index_{original_service_id}.json'))
 
   return index
 
