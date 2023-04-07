@@ -9,6 +9,10 @@ import os
 import sentry_sdk
 from sentry_sdk.integrations.flask import FlaskIntegration
 import crawl
+import s3_ultilities
+
+bucket_name = 'conciergeu-ai-bot-stgv6'
+s3_ultilities.init_data(bucket_name, ['index', 'data_crawled'])
 
 sentry_sdk.init(
     dsn=os.environ['SENTRY_DNS'],
@@ -56,6 +60,7 @@ def generate_index():
             scrape.save_contents(title, contents, original_service_id)
 
     qa.generate_index(f"data_{original_service_id}/", original_service_id)
+    s3_ultilities.upload_directory(bucket_name, 'index')
     return {"status": "Success"}
 
 
@@ -63,6 +68,7 @@ def generate_index():
 def start_crawl():
     try:
         crawl.start_crawl()
+        s3_ultilities.upload_directory(bucket_name, 'data_crawled')
         return {"status": "Success"}
     except Exception as e:
         print(e)

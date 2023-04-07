@@ -11,6 +11,8 @@ Sandbox for investigating new bot engine like ChatGPT
 
 - Add the `OPENAI_API_KEY` to the `.env` file
 
+- Add the `AWS_ACCESS_KEY_ID` and the `AWS_SECRET_ACCESS_KEY` to the `.env` file
+
 - Run the command below:
 
 ```
@@ -39,6 +41,7 @@ curl -X POST '127.0.0.1:5000/crawl' | jq .
 ```
 
 To generate index from all crawled data
+```
 curl -X POST '127.0.0.1:5000/index' -F'mode=all' | jq .
 ```
 
