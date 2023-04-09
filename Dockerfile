@@ -15,8 +15,3 @@ WORKDIR $APP_ROOT
 COPY requirements.txt $APP_ROOT
 RUN pip install -r requirements.txt
 COPY . $APP_ROOT
-
-RUN mkdir /tmp/ssm
-RUN curl https://s3.ap-northeast-1.amazonaws.com/amazon-ssm-ap-northeast-1/latest/debian_amd64/amazon-ssm-agent.deb -o /tmp/amazon-ssm-agent.deb \
-    && dpkg -i /tmp/amazon-ssm-agent.deb \
-    && cp /etc/amazon/ssm/seelog.xml.template /etc/amazon/ssm/seelog.xml
