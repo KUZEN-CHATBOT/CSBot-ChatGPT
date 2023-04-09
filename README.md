@@ -21,5 +21,5 @@ docker compose run app
 
 To send the message to the bot using index generated from crawled data
 ```
-curl '127.0.0.1:5000/message' -X POST -v  -F 'query=KuzenのCEOはだれすか' -F'original_service_id=crawled' | jq .
+curl '127.0.0.1:5000/message' -X POST -v  -F 'query=KUZENとは何ですか？' -F'original_service_id=crawled' | jq .
 ```
